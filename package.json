@@ -1,0 +1,14 @@
+{
+    "name": "components-cli",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:csrigogogo/components-cli.git",
+    "author": "csrigogogo <cri.sri@outlook.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "npx rollup -c rollup.config.js"
+    },
+    "devDependencies": {
+        "rollup": "^2.70.2"
+    }
+}
