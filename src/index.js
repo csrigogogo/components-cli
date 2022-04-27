@@ -1,5 +1,6 @@
+import Button from "./button"
 function sum(a, b) {
   return a + b
 }
 
-export { sum }
+export { sum, Button }
