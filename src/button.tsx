@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface haha {
     child: void;
     data: Array<string>;

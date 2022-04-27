@@ -1,5 +1,12 @@
 {
+  "include": ["src/**/*", "tests/**/*"],
+  "exclude": [
+    "dist"
+  ],
   "compilerOptions": {
-    "jsx": "preserve"
+    "jsx": "react",
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "."
   }
 }
