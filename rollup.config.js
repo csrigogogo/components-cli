@@ -1,24 +1,23 @@
-import resolve from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import babel, { getBabelOutputPlugin } from '@rollup/plugin-babel';
+import babel  from '@rollup/plugin-babel';
 
 export default {
-  input: "src/index.js",
-  plugins: [
-    resolve(),
-    commonjs(),
-    babel({ 
-      presets: ['@babel/preset-react'], 
-      babelHelpers: 'bundled'  
-    })
-  ],
-  output: {
-    file: 'dist/bundle.js',
-    format: 'esm',
+    input: "src/index.js",
     plugins: [
-      getBabelOutputPlugin({
-        presets: ['@babel/preset-env'],
-      })
-    ]
-  },
+        nodeResolve({
+            extensions: ['.js', '.jsx', '.ts', '.tsx']
+        }),
+        commonjs({include: "node_modules/**"}),
+        babel({
+            babelHelpers: 'bundled',
+            exclude: 'node_modules/**',
+        }),
+
+    ],
+    output: {
+        file: 'dist/bundle.js',
+        format: 'esm',
+    },
+    external: ['react']
 }
