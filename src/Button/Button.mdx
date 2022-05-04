@@ -1,0 +1,31 @@
+---
+name: Button
+---
+
+import { Playground, Props } from 'docz'
+import { Space } from 'antd';
+import { AButton as Button } from './Button.tsx'
+
+# Button
+
+## 属性
+
+<Props of={Button} />
+
+## 基础使用
+
+<Playground>
+    <Button>Some message</Button>
+</Playground>
+
+
+## 不同类型
+
+<Playground>
+    <Space>
+        <Button type={"primary"}>Some message</Button>
+        <Button type={"primary"}>Some message</Button>
+        <Button type={"primary"}>Some message</Button>
+        <Button type={"primary"}>Some message</Button>
+    </Space>
+</Playground>

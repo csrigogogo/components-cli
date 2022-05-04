@@ -1,5 +1,10 @@
 import React from 'react'
 
+interface AlertProps {
+    children: any,
+    kinds: 'info'| 'positive'| 'negative'| 'warning',
+    [key: string]: any
+}
 const kinds = {
     info: '#5352ED',
     positive: '#2ED573',
@@ -7,7 +12,7 @@ const kinds = {
     warning: '#FFA502',
 }
 
-export const Alert = ({ children, kind, ...rest }) => (
+export const Alert = ({ children, kind, ...rest }: AlertProps) => (
     <div
         style={{
             padding: 20,
