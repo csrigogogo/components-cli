@@ -1,6 +1,6 @@
-import Button from "./button"
+import { Alert } from "./Alert/Alert"
 function sum(a, b) {
   return a + b
 }
 
-export { sum, Button }
+export { sum, Alert }
