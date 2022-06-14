@@ -1,8 +1,10 @@
 {
+  "input": "./src/index.ts",
   "include": ["src/**/*", "tests/**/*"],
   "exclude": [
     "dist"
   ],
+  "clean": true,
   "compilerOptions": {
     "jsx": "react",
     "outDir": "dist",

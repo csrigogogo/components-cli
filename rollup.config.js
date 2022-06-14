@@ -5,7 +5,7 @@ import typescript from "@rollup/plugin-typescript";
 
 
 export default {
-    input: "src/index.js",
+    input: "src/index.ts",
     // acornInjectPlugins: [jsx()],
 
     plugins: [
@@ -13,7 +13,7 @@ export default {
             extensions: ['.js', '.jsx', '.ts', '.tsx']
         }),
         commonjs({include: "node_modules/**"}),
-        typescript({ tsconfig: './tsconfig.json' }),
+        typescript({  compilerOptions: { lib: ["es5", "es6", "dom"], target: "es5" }}),
         // babel({
         //     babelHelpers: 'bundled',
         //     exclude: 'node_modules/**',

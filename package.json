@@ -5,34 +5,30 @@
   "repository": "git@github.com:csrigogogo/components-cli.git",
   "author": "csrigogogo <cri.sri@outlook.com>",
   "license": "MIT",
-  "type": "module",
+
   "scripts": {
     "build": "npx rollup -c rollup.config.js",
-    "docz:dev": "docz dev",
-    "docz:build": "docz build",
-    "docz:serve": "docz build && docz serve"
+    "dumi": "cross-env APP_ROOT=dumi dumi dev",
+    "dumi-build": "cross-env APP_ROOT=dumi dumi build"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "@emotion/core": "10.1.1",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.2.1",
     "@rollup/plugin-typescript": "^8.3.2",
     "acorn-jsx": "^5.3.2",
     "antd": "^4.20.2",
-    "docz": "latest",
+    "cross-env": "^7.0.3",
+    "dumi": "^1.1.42",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rollup": "^2.70.2",
     "tslib": "^2.4.0",
     "typescript": "^4.6.3"
-  },
-  "resolutions": {
-    "remark-mdx": "1.6.22"
   },
   "peerDependencies": {
     "antd": "^4.20.2",
